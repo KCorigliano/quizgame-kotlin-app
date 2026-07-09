@@ -3,14 +3,10 @@ package de.syntax_institut.projektwoche1.data
 class DataSource {
 
     val quizCategories = listOf(
-        QuizCategory(
-            id = 1,
-            name = "General Knowledge"
-        ),
-        QuizCategory(
-            id = 2,
-            name = "Anime"
-        ),
+        QuizCategory(id = 1, name = "General Knowledge"),
+        QuizCategory(id = 2, name = "Anime"),
+        QuizCategory(id = 3, name = "Geography"),
+        QuizCategory(id = 4, name = "Science")
     )
 
     val quizzes = listOf(
@@ -69,6 +65,41 @@ class DataSource {
 
         Quiz(
             id = 2,
+            name = "General Knowledge 2",
+            questions = listOf(
+                Question(
+                    question = "How many elements are in the periodic table?",
+                    options = listOf(
+                        Option("118", 1),
+                        Option("112", 0),
+                        Option("120", 0),
+                        Option("108", 0)
+                    ),
+                ),
+                Question(
+                    question = "What is the currency of Japan?",
+                    options = listOf(
+                        Option("Yen", 1),
+                        Option("Won", 0),
+                        Option("Yuan", 0),
+                        Option("Baht", 0)
+                    ),
+                ),
+                Question(
+                    question = "Which is the smallest continent?",
+                    options = listOf(
+                        Option("Australia", 1),
+                        Option("Europe", 0),
+                        Option("Antarctica", 0),
+                        Option("South America", 0)
+                    ),
+                )
+            ),
+            category = 1
+        ),
+
+        Quiz(
+            id = 3,
             name = "Anime 1",
             questions = listOf(
                 Question(
@@ -101,10 +132,10 @@ class DataSource {
                 Question(
                     question = "Who is the main antagonist in the 'Naruto' series?",
                     options = listOf(
-                        Option("Naruto Uzumaki", 0),
+                        Option("Madara Uchiha", 1),
                         Option("Kakashi Hatake", 0),
                         Option("Naruto Uzumaki", 0),
-                        Option("Itachi Uchiha", 1)
+                        Option("Sakura Haruno", 0)
                     ),
                 ),
                 Question(
@@ -119,5 +150,83 @@ class DataSource {
             ),
             category = 2
         ),
+
+        Quiz(
+            id = 4,
+            name = "Anime 2",
+            questions = listOf(
+                Question(
+                    question = "What is the name of Goku's signature move in Dragon Ball?",
+                    options = listOf(
+                        Option("Kamehameha", 1),
+                        Option("Rasengan", 0),
+                        Option("Chidori", 0),
+                        Option("Getsuga Tensho", 0)
+                    ),
+                ),
+                Question(
+                    question = "In 'Fullmetal Alchemist', what is the Law of Alchemy called?",
+                    options = listOf(
+                        Option("Equivalent Exchange", 1),
+                        Option("Universal Balance", 0),
+                        Option("Natural Order", 0),
+                        Option("Alchemical Flow", 0)
+                    ),
+                )
+            ),
+            category = 2
+        ),
+
+        Quiz(
+            id = 5,
+            name = "Geography 1",
+            questions = listOf(
+                Question(
+                    question = "What is the longest river in the world?",
+                    options = listOf(
+                        Option("Nile", 1),
+                        Option("Amazon", 0),
+                        Option("Yangtze", 0),
+                        Option("Mississippi", 0)
+                    ),
+                ),
+                Question(
+                    question = "Which country has the most natural lakes?",
+                    options = listOf(
+                        Option("Canada", 1),
+                        Option("Russia", 0),
+                        Option("USA", 0),
+                        Option("Brazil", 0)
+                    ),
+                )
+            ),
+            category = 3
+        ),
+
+        Quiz(
+            id = 6,
+            name = "Science 1",
+            questions = listOf(
+                Question(
+                    question = "What is the chemical symbol for Gold?",
+                    options = listOf(
+                        Option("Au", 1),
+                        Option("Ag", 0),
+                        Option("Fe", 0),
+                        Option("Pb", 0)
+                    ),
+                ),
+                Question(
+                    question = "What is the speed of light?",
+                    options = listOf(
+                        Option("299,792,458 m/s", 1),
+                        Option("150,000,000 m/s", 0),
+                        Option("500,000,000 m/s", 0),
+                        Option("1,000,000,000 m/s", 0)
+                    ),
+                )
+            ),
+            category = 4
+        )
     )
 }
